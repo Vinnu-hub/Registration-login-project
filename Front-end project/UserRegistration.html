@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+
+<h1 id="para">User Registration</h1>
+<form class="container" method="post" action="your-action-url">
+
+    <label for="username">User Name:</label>
+    <input type="text" id="username" name="UserName"  required> <br><br>
+
+    <!-- When the form is submitted, the browser sends the input values to the server using these names as keys-->
+    <label for="email">Email:</label>
+    <!--The id attribute uniquely identifies an element within the HTML document.
+-->
+    <!--The value attribute defines the actual data that is sent to the server when the form is submitted.-->
+    <input type="email" id="email" name="Email" required> <br><br>
+
+    <label for="birthday"></label>Date of Birth:</label>
+    <input type="date" id="birthday" name="birthday" required><br><br>
+
+    <label for="gender">Select Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <label>Select Language:</label><br>
+    <input type="radio" id="english" name="language" value="english">
+    <label for="english">English</label><br>
+    <input type="radio" id="telugu" name="language" value="telugu">
+    <label for="telugu">Telugu</label><br>
+    <input type="radio" id="hindi" name="language" value="hindi">
+    <label for="hindi">Hindi</label><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required> <br><br>
+
+    <label for="myfile">Select a File:</label>
+    <input type="file" id="myfile" name="myfile"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

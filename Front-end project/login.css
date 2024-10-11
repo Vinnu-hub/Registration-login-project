@@ -1,0 +1,17 @@
+.container
+{
+    background-color: aliceblue;
+    padding: 5%;
+ border: 2px salmon;
+ /*
+  these is for to gt side by sidw  
+ display: flex;
+*/
+
+justify-content: center;
+align-items: center;
+height: 10vh;
+font-family: Arial, sans-serif; /* Sets a clean font for the page */
+    margin: 0; /* Removes default margin */
+
+}
