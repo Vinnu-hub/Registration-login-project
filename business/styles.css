@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    background-color: #131212bd;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background-color: rgb(106, 163, 134);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+.navbar .logo a span {
+    color: rgb(74, 159, 103);
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .menu li {
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: crimson;
+    font-weight: bold;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.scroll-up-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Hide by default; show with JS when scrolling */
+}
+
+
+
+
+/* home-section styling */
+.home {
+    display: flex;
+    background-image: 
+url('view-bicycle-silhouette_23-2150834254.avif');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    min-height: 500px;
+    font-family: "Ubunto", sans-serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: crimson;
+    font-weight: 500;
+}
+
+.home .home-content a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(32, 161, 97);
+}
+
+.home .home-content a:hover {
+    color: crimson;
+    background: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.welcome-section, .about-section, .services-section, .contact-section {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+}
+.about-content {
+    display: flex;
+    align-items: center; /* Center content vertically */
+}
+
+.column {
+    flex: 1; /* Equal width for columns */
+    padding: 20px; /* Padding inside columns */
+}
+
+.column.left {
+    flex: 0 0 40%; /* Set width of the left column (image) */
+}
+
+.column.right {
+    flex: 1; /* Take the remaining space for the right column (text) */
+    text-align: left; /* Align text to the left */
+}
+
+.column.left img {
+    max-width: 100%; /* Responsive image */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.title {
+    text-align: center; /* Center title */
+    font-size: 36px; /* Title font size */
+    margin-bottom: 30px; /* Space below title */
+}
+
+.about-content p {
+    margin: 10px 0; /* Space between paragraphs */
+}
+
+.about-content a {
+    display: inline-block;
+    margin-top: 20px; /* Space above link */
+    padding: 10px 20px; /* Button-like appearance */
+    background-color: rgba(74, 159, 103, 0.8); /* Background color for link */
+    color: white;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+}
+
+.about-content a:hover {
+    background-color: rgba(74, 159, 103, 1); /* Darker on hover */
+}
+
+.services {
+    padding: 60px 0; /* Space around the section */
+    background: #f4f4f4; /* Lighter background for contrast */
+    color: #333; /* Darker text for readability on lighter background */
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.services-content {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-around; /* Evenly space cards */
+    flex-wrap: wrap; /* Allow wrapping */
+    width: 100%; /* Full width for the container */
+    align-items: stretch; /* Make all cards equal height */
+}
+
+.card {
+    background: #ffffff; /* Card background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    padding: 30px; /* Padding inside cards */
+    text-align: center; /* Center content */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+    margin: 15px; /* Space around cards */
+    width: 280px; /* Fixed width for cards */
+    flex: 1; /* Allow cards to grow */
+    min-height: 300px; /* Set a minimum height */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.icon {
+    font-size: 50px; /* Icon size */
+    color: #ff6f61; /* Icon color */
+    margin-bottom: 15px; /* Space below icon */
+}
+
+.card-info {
+    padding: 10px; /* Space inside card info */
+}
+
+.card-info .text {
+    font-size: 22px; /* Service title size */
+    font-weight: bold; /* Bold title */
+    margin: 10px 0; /* Margin around title */
+}
+
+.card-info p {
+    color: #666; /* Darker description text for contrast */
+}
+
+
+
+
+  /* Contact Section Styling */
+  .contact {
+    padding: 60px 0; /* Space around the section */
+    background: #f3f3f3; /* Light background color */
+    color: #333; /* Text color */
+}
+
+.contact .title {
+    text-align: center; /* Center the title */
+    font-size: 36px; /* Title size */
+    margin-bottom: 40px; /* Space below title */
+}
+
+.contact .contact-content {
+    display: flex; /* Flexbox for side-by-side layout */
+    justify-content: space-between; /* Space between columns */
+    max-width: 1200px; /* Maximum width for the content */
+    margin: auto; /* Center the content */
+}
+
+/* Column Styling */
+.contact .contact-content .column {
+    width: calc(50% - 20px); /* Width of each column */
+    padding: 20px; /* Padding around columns */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background: #fff; /* White background for both columns */
+}
+
+/* Icons Styling */
+.contact .contact-content .row {
+    display: flex; /* Flexbox for icon rows */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 15px; /* Space between rows */
+}
+
+.contact .contact-content .row i {
+    font-size: 25px; /* Icon size */
+    color: crimson; /* Icon color */
+    margin-right: 15px; /* Space between icon and text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact .contact-content {
+        flex-direction: column; /* Stack columns on small screens */
+    }
+
+    .contact .contact-content .column {
+        width: 100%; /* Full width for stacked columns */
+        margin-bottom: 20px; /* Space between stacked columns */
+    }
+}
+
+/* Additional Form Styling */
+.contact .right form .fields {
+    display: flex;
+    flex-direction: column; /* Stack fields vertically */
+}
+
+.contact .right form .field {
+    height: 45px; /* Height of input fields */
+    margin-bottom: 15px; /* Space between fields */
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+    border: 1px solid lightgray; /* Border styling */
+    border-radius: 6px; /* Rounded corners */
+    outline: none; /* Remove outline */
+    padding: 0 15px; /* Padding inside fields */
+    font-size: 17px; /* Font size */
+}
+
+.contact .right form .textarea {
+    height: 80px; /* Height of textarea */
+}
+
+.contact .right form .button {
+    height: 47px; /* Button height */
+    margin-top: 10px; /* Space above button */
+}
+
+.contact .right form .button button {
+    width: 100%; /* Full width for button */
+    height: 100%; /* Full height */
+    border: 2px solid crimson; /* Border styling */
+    background: crimson; /* Button background */
+    color: #fff; /* Text color */
+    font-size: 20px; /* Font size */
+    font-weight: 500; /* Font weight */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.contact .right form .button button:hover {
+    color: crimson; /* Text color on hover */
+    background: none; /* Remove background on hover */
+}
+
+
+
+
+
+/* footer section styling start */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #d4d4d4;
+    padding: 20px 23px;
+    color: #fff;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.socialIcons a {
+    width: 35px;
+    margin: 0 5px;
+}
+
+
+footer span a {
+    color: crimson;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* these css  code is for the login page  */
+/* 
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 15px;
+} */
+/* end */
+

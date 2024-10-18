@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Project Registration</title>
+    <link rel="stylesheet" href="UserRegistration.css">
+    <script>
+        function showFields() {
+            const companyType = document.getElementById('company-type').value;
+            const hospitalFields = document.getElementById('hospital-fields');
+            const bankFields = document.getElementById('bank-fields');
+            const softwareFields = document.getElementById('software-fields');
+            const otherFields = document.getElementById('other-fields');
+
+            // Hide all fields initially
+            hospitalFields.style.display = 'none';
+            bankFields.style.display = 'none';
+            softwareFields.style.display = 'none';
+            otherFields.style.display = 'none';
+
+            // Show fields based on the selected company type
+            if (companyType === 'hospital') {
+                hospitalFields.style.display = 'block';
+            } else if (companyType === 'bank') {
+                bankFields.style.display = 'block';
+            } else if (companyType === 'software-firm') {
+                softwareFields.style.display = 'block';
+            } else if (companyType === 'other') {
+                otherFields.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h1>Client Project Registration</h1>
+<form class="container" method="post" action="submit-registration.php">
+
+    <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <div class="form-group">
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+    </div>
+
+    <div class="form-group">
+        <label for="location">Client Location:</label>
+        <select id="location" name="location" required>
+            <option value="">Select Location</option>
+            <option value="mumbai">Mumbai, India</option>
+            <option value="hyderabad">Hyderabad, India</option>
+            <option value="pune">Pune, India</option>
+            <option value="bangalore">Bangalore, India</option>
+            <option value="delhi">Delhi, India</option>
+            <option value="noida">Noida, India</option>
+            <option value="new-york">New York, USA</option>
+            <option value="los-angeles">Los Angeles, USA</option>
+            <option value="paris">Paris, France</option>
+            <option value="london">London, UK</option>
+            <option value="tokyo">Tokyo, Japan</option>
+            <option value="berlin">Berlin, Germany</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="company-type">Company Type:</label>
+        <select id="company-type" name="company_type" required onchange="showFields()">
+            <option value="">Select Company Type</option>
+            <option value="hospital">Hospital</option>
+            <option value="bank">Bank</option>
+            <option value="software-firm">Software Firm</option>
+            <option value="consulting-firm">Consulting Firm</option>
+            <option value="retail">Retail</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="education">Education</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label for="project-type">Project Type:</label>
+        <select id="project-type" name="project_type" required>
+            <option value="">Select Project Type</option>
+            <option value="website-development">Website Development</option>
+            <option value="e-commerce">E-Commerce</option>
+            <option value="web-application">Web Application</option>
+            <option value="content-management-system">Content Management System</option>
+            <option value="landing-page">Landing Page</option>
+            <option value="blog">Blog</option>
+            <option value="portfolio">Portfolio</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+
+    <!-- Hospital-specific fields -->
+    <div id="hospital-fields" style="display: none;">
+        <div class="form-group">
+            <label for="hospital-name">Hospital Name:</label>
+            <input type="text" id="hospital-name" name="hospital_name" placeholder="Enter Hospital Name">
+        </div>
+        <div class="form-group">
+            <label for="services-offered">Services Offered:</label>
+            <input type="text" id="services-offered" name="services_offered" placeholder="Enter Services Offered">
+        </div>
+    </div>
+
+    <!-- Bank-specific fields -->
+    <div id="bank-fields" style="display: none;">
+        <div class="form-group">
+            <label for="bank-name">Bank Name:</label>
+            <input type="text" id="bank-name" name="bank_name" placeholder="Enter Bank Name">
+        </div>
+        <div class="form-group">
+            <label for="account-type">Account Type:</label>
+            <select id="account-type" name="account_type">
+                <option value="savings">Savings</option>
+                <option value="current">Current</option>
+                <option value="business">Business</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Software Firm-specific fields -->
+    <div id="software-fields" style="display: none;">
+        <div class="form-group">
+            <label for="software-name">Software Firm Name:</label>
+            <input type="text" id="software-name" name="software_name" placeholder="Enter Software Firm Name">
+        </div>
+        <div class="form-group">
+            <label for="project-type">Project Type:</label>
+            <input type="text" id="project-type" name="project_type" placeholder="Enter Type of Project">
+        </div>
+    </div>
+
+    <!-- Other-specific fields -->
+    <div id="other-fields" style="display: none;">
+        <div class="form-group">
+            <label for="other-info">Additional Information:</label>
+            <textarea id="other-info" name="other_info" rows="4" placeholder="Provide any other information"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="design-description">Project Design Description:</label>
+        <textarea id="design-description" name="design_description" rows="4" required placeholder="Describe your project design preferences..."></textarea>
+    </div>
+
+
+
+    <input type="submit" value="Register Project">
+</form>
+
+</body>
+</html>

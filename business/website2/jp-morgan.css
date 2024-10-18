@@ -1,0 +1,550 @@
+.header {
+    background-color: white;
+    /* 15px: This value sets the top and bottom padding to 10 pixels.
+0: This value sets the left and right padding to 0 pixels. */
+    padding: 10px 0px;
+    position: fixed;
+    width: 100%; /* Changed from 100px to 100% */
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+
+/* home-section styling */
+.home {
+    display: flex;
+    background-image: 
+url('insurance-company-clients-take-out-600nw-2484469771.webp');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    min-height: 500px;
+    font-family: "Ubunto", sans-serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: crimson;
+    font-weight: 500;
+}
+
+.home .home-content a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(32, 161, 97);
+}
+
+.home .home-content a:hover {
+    color: crimson;
+    background: none;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* 0px: This value sets the top and bottom margins to 0 pixels. There will be no space above or below the element.
+25px: This value sets the left and right margins to 25 pixels. There will be 25 pixels of space on both the left and right sides of the element. */
+    margin: 0px 25px;
+    border-bottom: 2px solid #ccc; /* Adds a bottom border */
+}
+
+
+.logo1 {
+    width: 120px;   /* Sets the width of the element to 120 pixels according to downscroll */
+    height: auto;   /* Sets the height to automatically adjust based on the width to maintain the aspect ratio */
+}
+
+.nav-list {
+    display: flex; /* Align items horizontally */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.nav-list li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+.nav-list li a {
+    display: block; /* Make the anchor tag a block element */
+    padding: 10px 15px; /* Padding for clickable area */
+    background-color: #f0f0f0; /* Background color for the box effect */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: aquamarine;
+    /* 0px is the horizontal offset (centered), 8px is the vertical offset (8 pixels down), and 16px is the blur radius (creates a soft, diffused shadow) */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    min-width: 160px; /* This sets the minimum width of the element to 160 pixels. */
+    z-index: 1;
+    flex-direction: row; /* Added to arrange items horizontally */
+    padding: 0; /* Added to remove padding */
+}
+
+.dropdown-content li {
+    margin: 0;
+    display: inline-block; /* Added to ensure items are displayed inline */
+}
+
+.dropdown-content li a {
+    padding: 12px;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* 
+The first rule changes the background color of links in the dropdown when hovered.
+The second rule shows the dropdown menu when the user hovers over its parent element. */
+.dropdown-content li a:hover {
+    background-color: #48CFCB;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex; /* Changed to flex for horizontal display */
+}
+
+.nav-list li a:hover {
+    background-color: #48CFCB; /* Change background color on hover */
+}
+
+.buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.login-btn, .trial-btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.login-btn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.trial-btn {
+    background-color: #48CFCB;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #e0e0e0; /* Lighten on hover */
+}
+
+.trial-btn:hover {
+    background-color: #3bb6b2; /* Darken on hover */
+}
+
+
+
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+
+.login-btn, .trial-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 15px;
+    border-radius: 4px;
+    background-color: #48CFCB;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.login-btn {
+    background-color: transparent;
+     /* with transparent we havre to use alwau\ys color  and border */
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+/* The :hover pseudo-class in CSS is used to define styles that apply when a user hovers over an element with their mouse.
+.login-btn:hover { */
+.login-btn:hover{
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+.trial-btn {
+    background-color: transparent;
+    
+    color: #23795f;
+    border: 2px solid #007bff;
+}
+
+.trial-btn:hover {
+    background-color:rgb(77, 6, 29);
+}
+/* }
+.new-home-para{
+    width: 250px;
+    height: 150px;
+    background-color:aquamarine;
+
+} */
+
+/* Mobile button styling */
+.mobile-button {
+    display: none;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-button:hover {
+    background-color: #218838;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for additional elements inside the section */
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+
+
+.gap {
+    margin-top: 0; /* Removed negative margin */
+    padding: 20px 0; /* Added padding for spacing */
+}
+
+.clients {
+    background-color: #F5F5F5;
+    min-height: 200px; /* Use min-height to allow for content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+    padding: 20px 0; /* Added padding for space */
+}
+
+.client-title {
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom: 20px; /* Space below title */
+}
+
+.photos {
+    max-width: 100%;
+    height: 250%;
+}
+
+.companies {
+    margin: 0px 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow logos to wrap */
+}
+
+
+
+
+.awardline {
+    margin-top: 40px; /* Increased space above award line */
+    padding-top: 20px; /* Adjusted padding */
+    text-align: center;
+    margin-bottom: 20px; /* Space below title */
+}
+
+.awardphoto {
+    max-width: 40%;
+    height: auto;
+}
+
+.awardpic {
+    margin: 0px 60px;
+}
+
+
+
+
+
+
+
+.worldchange {
+    margin: 0px 60px;
+}
+
+
+.title
+{
+  
+    font-size:35px;
+    margin-top:50px;
+    padding-top:30px;
+    text-align:center;
+    margin-bottom:30px;
+}
+.prepara
+{
+    text-align:center;
+    font-size:17px;
+    font-weight:normal;
+}
+.container-box {
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maincontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Left Container - Text Content */
+.leftcontainer {
+    flex: 0 0 35%;
+}
+
+.sidebar {
+    margin-bottom: 20px;
+    padding: 15px; /* Added padding for better spacing */
+    transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+.containerheading {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.details {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.sidebar:hover {
+    background-color: #48CFCB;
+}
+
+.rightcontainer {
+    flex: 0 0 60%; /* Adjusted for better layout */
+}
+
+.rightphoto {
+    max-width: 100%;
+    height: auto; /* Ensures responsive image */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section7{
+    margin:30px 60px 0px 60px;
+   
+}
+.cardheading{
+    font-size:25px;
+    margin-top:40px;
+    margin-bottom:50px;
+    text-align:center;
+    color:#2C2E31;
+
+    
+}
+.fa-dollar-sign,.fa-plus,.fa-check,.fa-address-book,.fa-file-excel,.fa-calendar-days{
+    font-size:30px;
+    margin:40px 40px 20px 0px;
+    color:#48CFCB;
+    border:2px solid #48CFCB;
+    border-radius:100px;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sections:hover i {
+    color:red;
+   
+}
+.sections:hover  {
+      scale:1.1;
+      box-shadow:5px 5px;   
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.logo{
+ 
+    height:30px;
+    font-size:25px;
+}
+.logopara{
+    margin-top:10px;
+    height:30px;
+    font-size: 17px;
+    line-height: 20px;
+}
+.cards{
+    margin: 0px 15px;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of cards to new rows */
+    justify-content: space-between; /* Distribute space between cards */
+    gap: 20px;
+}
+.sections{
+    
+    height: 300px;
+    width: calc(33.33% - 20px); /* Make sure 3 cards fit in a row */
+    border: 2px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+
+
+}
+
+
+
+
+
+
+
+
+.footersection {
+    background-color: #1a1a1a; /* Main footer background */
+    color: #fff; /* Default text color */
+    padding: 10px 20px; /* Reduced padding */
+    font-size: 13px; /* Slightly smaller font size */
+}
+
+.footer-container {
+    background-color:blanchedalmond;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduced gap between items */
+}
+
+.location {
+    flex: 1 1 100%;
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+.locations {
+    flex: 1 1 120px; /* Adjusted width */
+    background-color: #333; /* Background color for locations */
+    border-radius: 5px; /* Rounded corners for better aesthetics */
+    padding: 5px; /* Padding inside the location boxes */
+}
+
+.places {
+    font-weight: bold;
+    color: #fff; /* Text color for places */
+    margin-bottom: 3px; /* Reduced margin */
+}
+
+.places2 {
+    margin-top: 2px; /* Reduced margin */
+    color: #afb1b4; /* Secondary text color */
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: #fff;
+    margin: 15px 0; /* Reduced margin around the divider */
+}
+
+.last {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px; /* Reduced margin */
+}
+
+.lastheadingleft {
+    color: #afb1b4;
+}
+
+.lastright {
+    display: flex;
+}
+
+.lastthings {
+    display: flex;
+    gap: 10px; /* Reduced gap between items */
+    list-style: none;
+    color: #afb1b4;
+    margin: 0;
+    padding: 0;
+}
+
+.lastthings li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lastthings li:hover {
+    color: #fff; /* Change color on hover */
+}
